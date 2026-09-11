@@ -10,6 +10,7 @@
         :root {
             --primary: #ff1e38;
             --primary-glow: rgba(255, 30, 56, 0.4);
+            --partner-yellow: #ffde00;
             --dark-bg: #07080a;
             --card-bg: #12151c;
             --border-color: #222736;
@@ -268,24 +269,22 @@
             align-items: center;
         }
 
-        /* ESTILO PARA A perfil.PNG NO LUGAR DO LOGÓTIPO GRANDE */
-        .perfil-large-img {
+        .capa2-img {
             width: 100%;
-            max-width: 480px;
+            max-width: 420px;
             border-radius: 16px;
-            object-fit: contain;
+            object-fit: cover;
             border: 2px solid var(--border-color);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.7);
-            background: var(--card-bg);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
             transition: transform 0.3s ease;
         }
 
-        .perfil-large-img:hover {
+        .capa2-img:hover {
             transform: scale(1.02);
             border-color: var(--primary);
         }
 
-        /* SHOWCASE SECTION */
+        /* TRABALHOS RECENTES EM DESTAQUE */
         .showcase-section {
             padding: 100px 20px 60px;
             max-width: 1200px;
@@ -334,7 +333,7 @@
             border-color: var(--primary);
         }
 
-        /* SERVICES & PRICING */
+        /* SERVIÇOS & PRECÁRIO */
         .services-section {
             padding: 80px 20px 100px;
             max-width: 1200px;
@@ -421,92 +420,82 @@
             color: #fff;
         }
 
-        /* SECÇÃO DE PARCERIA (BRM PERFORMANCE) */
-        .partnership-section {
-            padding: 60px 20px 80px;
+        /* SECÇÃO DE PARCERIA OFICIAL (ESTILO BRM PERFORMANCE) */
+        .partner-section {
+            padding: 80px 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .partnership-box {
+        .partner-box {
             background: linear-gradient(135deg, #12151c 0%, #171b26 100%);
-            border: 2px solid var(--primary);
+            border: 1px solid rgba(255, 222, 0, 0.2);
             border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 20px 40px rgba(255, 30, 56, 0.15);
+            padding: 50px;
             display: grid;
             grid-template-columns: 0.8fr 1.2fr;
             gap: 40px;
             align-items: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            position: relative;
+            overflow: hidden;
         }
 
-        .partnership-left {
-            text-align: center;
-            border-right: 1px solid var(--border-color);
-            padding-right: 20px;
+        .partner-box::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 100%;
+            background: var(--partner-yellow);
+            box-shadow: 0 0 15px var(--partner-yellow);
         }
 
-        .partnership-left h3 {
-            font-size: 1.8rem;
+        .partner-img-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .partner-logo {
+            width: 100%;
+            max-width: 260px;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid var(--partner-yellow);
+            box-shadow: 0 0 25px rgba(255, 222, 0, 0.25);
+        }
+
+        .partner-info h3 {
+            font-size: 2rem;
             font-weight: 800;
-            letter-spacing: 1px;
             margin-bottom: 15px;
             color: #fff;
+            letter-spacing: 1px;
         }
 
-        .partnership-left h3 span {
-            color: var(--primary);
+        .partner-info h3 span {
+            color: var(--partner-yellow);
         }
 
-        .partnership-left p {
-            color: #ffcc00;
-            font-weight: 600;
-            font-size: 0.95rem;
-            margin-top: 15px;
-            font-style: italic;
-        }
-
-        .brm-logo-placeholder {
-            font-size: 2rem;
-            font-weight: 900;
-            color: #ffcc00;
-            background: #000;
-            padding: 20px;
-            border-radius: 50%;
-            width: 120px;
-            height: 120px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto;
-            border: 3px solid #ffcc00;
-            box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
-        }
-
-        .partnership-right h4 {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .brm-services-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-
-        .brm-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .partner-info p {
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
         }
 
-        .brm-item i {
-            color: #ffcc00;
+        .badge-partner {
+            display: inline-block;
+            background: rgba(255, 222, 0, 0.1);
+            color: var(--partner-yellow);
+            border: 1px solid rgba(255, 222, 0, 0.3);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
         }
 
         /* BANNER DE MARCAÇÃO CTA */
@@ -548,15 +537,9 @@
         }
 
         @media(max-width: 968px) {
-            .hero-content, .partnership-box {
+            .hero-content, .partner-box {
                 grid-template-columns: 1fr;
                 text-align: center;
-            }
-            .partnership-left {
-                border-right: none;
-                border-bottom: 1px solid var(--border-color);
-                padding-right: 0;
-                padding-bottom: 30px;
             }
             .nav-menu {
                 display: none;
@@ -567,8 +550,8 @@
             .hero-text h1 {
                 font-size: 2.5rem;
             }
-            .brm-services-grid {
-                grid-template-columns: 1fr;
+            .partner-info {
+                text-align: center;
             }
         }
     </style>
@@ -591,30 +574,29 @@
                 <div class="logo-text">PEPPER<span>WASH</span></div>
             </a>
             <ul class="nav-menu">
-                <li><a href="#trabalhos">Trabalhos Recentes</a></li>
+                <li><a href="#trabalhos">Trabalhos</a></li>
                 <li><a href="#servicos">Serviços & Precário</a></li>
                 <li><a href="#parceria">Parceria</a></li>
-                <li><a href="https://buk.pt/pepperwash" target="_blank">Reservas & Horários</a></li>
+                <li><a href="https://pepper-wash.buk.pt" target="_blank">Reservas</a></li>
             </ul>
             <div class="nav-buttons">
                 <a href="https://www.instagram.com/pepperwash87" target="_blank" class="social-btn" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://buk.pt/pepperwash" target="_blank" class="btn-main">Reservar Agora</a>
+                <a href="https://pepper-wash.buk.pt" target="_blank" class="btn-main">Reservar Agora</a>
             </div>
         </div>
     </header>
 
-    <!-- HERO SECTION COM perful.PNG NO LADO DIREITO -->
+    <!-- HERO SECTION COM CAPA2.PNG -->
     <section class="hero">
         <div class="hero-content">
             <div class="hero-text">
                 <div class="moto">Conhecimento • Paixão • Perfeição</div>
                 <h1>Auto Detailing & <span>Cuidado Automóvel</span></h1>
                 <p>Especialistas na renovação estética e proteção avançada do seu veículo. Veja abaixo os nossos trabalhos em destaque ou consulte o precário completo.</p>
-                <a href="#servicos" class="btn-main" style="padding: 14px 32px; font-size: 1.1rem; display: inline-block;">Ver Precário & Serviços</a>
+                <a href="#servicos" class="btn-main" style="padding: 14px 32px; font-size: 1.1rem; background: transparent; border: 2px solid var(--primary);">Ver Precário & Serviços</a>
             </div>
             <div class="hero-logo-box">
-                <!-- Imagem Capa2.png inserida no lugar do logo grande -->
-                <img src="perfil.png" alt="Pepper Wash Chefe Fabio" class="perfil-large-img" onerror="this.src='logo.png'">
+                <img src="Capa2.png" alt="Pepper Wash Auto Detailing Capa" class="capa2-img" onerror="this.src='logo.png'">
             </div>
         </div>
     </section>
@@ -656,7 +638,7 @@
                 </div>
                 <div class="service-footer">
                     <div class="price-tag">A partir de 25€ <span>Margem estimada</span></div>
-                    <a href="https://buk.pt/pepperwash" target="_blank" class="btn-card-book">Reservar</a>
+                    <a href="https://pepper-wash.buk.pt" target="_blank" class="btn-card-book">Reservar</a>
                 </div>
             </div>
 
@@ -668,7 +650,7 @@
                 </div>
                 <div class="service-footer">
                     <div class="price-tag">A partir de 30€ <span>Margem estimada</span></div>
-                    <a href="https://buk.pt/pepperwash" target="_blank" class="btn-card-book">Reservar</a>
+                    <a href="https://pepper-wash.buk.pt" target="_blank" class="btn-card-book">Reservar</a>
                 </div>
             </div>
 
@@ -680,7 +662,7 @@
                 </div>
                 <div class="service-footer">
                     <div class="price-tag">A partir de 50€ <span>Margem estimada</span></div>
-                    <a href="https://buk.pt/pepperwash" target="_blank" class="btn-card-book">Reservar</a>
+                    <a href="https://pepper-wash.buk.pt" target="_blank" class="btn-card-book">Reservar</a>
                 </div>
             </div>
 
@@ -692,7 +674,7 @@
                 </div>
                 <div class="service-footer">
                     <div class="price-tag">Sob Consulta <span>Orçamento dedicado</span></div>
-                    <a href="https://buk.pt/pepperwash" target="_blank" class="btn-card-book">Reservar</a>
+                    <a href="https://pepper-wash.buk.pt" target="_blank" class="btn-card-book">Reservar</a>
                 </div>
             </div>
 
@@ -704,7 +686,7 @@
                 </div>
                 <div class="service-footer">
                     <div class="price-tag">A partir de 45€ <span>Margem estimada</span></div>
-                    <a href="https://buk.pt/pepperwash" target="_blank" class="btn-card-book">Reservar</a>
+                    <a href="https://pepper-wash.buk.pt" target="_blank" class="btn-card-book">Reservar</a>
                 </div>
             </div>
 
@@ -716,7 +698,7 @@
                 </div>
                 <div class="service-footer">
                     <div class="price-tag">A partir de 40€ <span>Par de óticas</span></div>
-                    <a href="https://buk.pt/pepperwash" target="_blank" class="btn-card-book">Reservar</a>
+                    <a href="https://pepper-wash.buk.pt" target="_blank" class="btn-card-book">Reservar</a>
                 </div>
             </div>
 
@@ -728,7 +710,7 @@
                 </div>
                 <div class="service-footer">
                     <div class="price-tag">A partir de 60€ <span>Margem estimada</span></div>
-                    <a href="https://buk.pt/pepperwash" target="_blank" class="btn-card-book">Reservar</a>
+                    <a href="https://pepper-wash.buk.pt" target="_blank" class="btn-card-book">Reservar</a>
                 </div>
             </div>
 
@@ -740,37 +722,25 @@
                 </div>
                 <div class="service-footer">
                     <div class="price-tag">Sob Consulta <span>Orçamento dedicado</span></div>
-                    <a href="https://buk.pt/pepperwash" target="_blank" class="btn-card-book">Reservar</a>
+                    <a href="https://pepper-wash.buk.pt" target="_blank" class="btn-card-book">Reservar</a>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- SECÇÃO DE PARCERIA (BRM PERFORMANCE) -->
-    <section class="partnership-section" id="parceria">
-        <div class="section-title">
-            <h2>Parceria <span>Estratégica</span></h2>
-            <p>Trabalho conjunto para garantir a máxima performance e cuidado total</p>
-        </div>
-        <div class="partnership-box">
-            <div class="partnership-left">
-                <div class="brm-logo-placeholder">BRM</div>
-                <h3 style="margin-top: 15px;">BRM <span>PERFORMANCE</span></h3>
-                <p>Mais potência, mais emoção, sempre contigo!</p>
+    <!-- SECÇÃO DE PARCERIA OFICIAL (BRM PERFORMANCE) -->
+    <section class="partner-section" id="parceria">
+        <div class="partner-box">
+            <div class="partner-img-container">
+                <!-- Imagem parceria.png -->
+                <img src="parceria.png" alt="BRM Performance Parceria Oficial" class="partner-logo" onerror="this.src='https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=400&q=80'">
             </div>
-            <div class="partnership-right">
-                <h4>Mecânica Geral – Exemplos de Serviços:</h4>
-                <div class="brm-services-grid">
-                    <div class="brm-item"><i class="fa-solid fa-wrench"></i> Manutenção e Revisões</div>
-                    <div class="brm-item"><i class="fa-solid fa-circle-exclamation"></i> Sistema de Travagem</div>
-                    <div class="brm-item"><i class="fa-solid fa-laptop-code"></i> Diagnóstico Eletrónico</div>
-                    <div class="brm-item"><i class="fa-solid fa-car-burst"></i> Suspensão</div>
-                    <div class="brm-item"><i class="fa-solid fa-microchip"></i> Reprogramação de Centralinas</div>
-                    <div class="brm-item"><i class="fa-solid fa-snowflake"></i> Ar Condicionado</div>
-                    <div class="brm-item"><i class="fa-solid fa-filter"></i> Eliminação de FAP e EGR</div>
-                    <div class="brm-item"><i class="fa-solid fa-circle"></i> Pneus e Alinhamento</div>
-                </div>
+            <div class="partner-info">
+                <span class="badge-partner">Parceria Oficial</span>
+                <h3>BRM <span>PERFORMANCE</span></h3>
+                <p>Unimos forças com os melhores especialistas em performance automóvel para garantir que o seu veículo não só brilha por fora com o nosso detailing de excelência, mas também conta com o melhor suporte técnico e mecânico de topo.</p>
+                <a href="https://pepper-wash.buk.pt" target="_blank" class="btn-main" style="background: linear-gradient(135deg, #ffde00 0%, #cca800ə 100%); color: #000; font-weight: 700;">Saber Mais & Reservar</a>
             </div>
         </div>
     </section>
@@ -780,13 +750,13 @@
         <div class="cta-box">
             <h2>Pronto para transformar o seu veículo?</h2>
             <p>Selecione o serviço pretendido, consulte os horários disponíveis e garanta a sua reserva de forma rápida e cómoda.</p>
-            <a href="https://buk.pt/pepperwash" target="_blank" class="btn-main" style="font-size: 1.1rem; padding: 14px 35px;">Consultar Disponibilidade & Reservar</a>
+            <a href="https://pepper-wash.buk.pt" target="_blank" class="btn-main" style="font-size: 1.1rem; padding: 14px 35px;">Consultar Disponibilidade & Reservar</a>
         </div>
     </section>
 
     <!-- RODAPÉ -->
     <footer>
-        <p>&copy; 2026 Pepper Wash - Auto Detailing. Todos os dados reservados. Conhecimento • Paixão • Perfeição.</p>
+        <p>&copy; 2026 Pepper Wash - Auto Detailing. Todos os direitos reservados. Conhecimento • Paixão • Perfeição.</p>
     </footer>
 
     <!-- SCRIPTS -->
