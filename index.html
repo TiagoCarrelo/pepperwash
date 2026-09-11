@@ -32,6 +32,63 @@
             padding-top: 80px;
         }
 
+        /* EFEITO SPLASH SCREEN (ABERTURA COM LOGÓTIPO EM DESTAQUE) */
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: var(--dark-bg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+
+        #splash-screen.fade-out {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .splash-content {
+            text-align: center;
+            animation: zoomInLogo 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .splash-content img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary);
+            box-shadow: 0 0 40px var(--primary-glow);
+            margin-bottom: 20px;
+        }
+
+        .splash-content h2 {
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .splash-content h2 span {
+            color: var(--primary);
+        }
+
+        @keyframes zoomInLogo {
+            0% {
+                transform: scale(0.7);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
         /* HEADER & NAVBAR COM SCROLL DINÂMICO */
         header {
             position: fixed;
@@ -429,6 +486,14 @@
 </head>
 <body>
 
+    <!-- EFEITO DE ABERTURA (SPLASH SCREEN) -->
+    <div id="splash-screen">
+        <div class="splash-content">
+            <img src="logo.png" alt="Pepper Wash Logo">
+            <h2>PEPPER <span>WASH</span></h2>
+        </div>
+    </div>
+
     <!-- NAVBAR DINÂMICA -->
     <header id="navbar">
         <div class="nav-container">
@@ -603,8 +668,17 @@
         <p>&copy; 2026 Pepper Wash - Auto Detailing. Todos os direitos reservados. Conhecimento • Paixão • Perfeição.</p>
     </footer>
 
-    <!-- SCRIPT DE TRANSIÇÃO DO SCROLL -->
+    <!-- SCRIPTS DE CONTROLO DO SCROLL E DO SPLASH SCREEN -->
     <script>
+        // Efeito de fecho do Splash Screen após 1.2 segundos
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const splash = document.getElementById('splash-screen');
+                splash.classList.add('fade-out');
+            }, 1200);
+        });
+
+        // Efeito de encolher o menu ao fazer scroll
         window.addEventListener('scroll', function() {
             const header = document.getElementById('navbar');
             if (window.scrollY > 40) {
