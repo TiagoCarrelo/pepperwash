@@ -268,17 +268,19 @@
             align-items: center;
         }
 
-        .capa2-img {
+        /* ESTILO PARA A CAPA2.PNG NO LUGAR DO LOGÓTIPO GRANDE */
+        .capa2-large-img {
             width: 100%;
-            max-width: 420px;
+            max-width: 480px;
             border-radius: 16px;
-            object-fit: cover;
+            object-fit: contain;
             border: 2px solid var(--border-color);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+            background: var(--card-bg);
             transition: transform 0.3s ease;
         }
 
-        .capa2-img:hover {
+        .capa2-large-img:hover {
             transform: scale(1.02);
             border-color: var(--primary);
         }
@@ -601,18 +603,18 @@
         </div>
     </header>
 
-    <!-- HERO SECTION COM CAPA2.PNG -->
+    <!-- HERO SECTION COM CAPA2.PNG NO LADO DIREITO -->
     <section class="hero">
         <div class="hero-content">
             <div class="hero-text">
                 <div class="moto">Conhecimento • Paixão • Perfeição</div>
                 <h1>Auto Detailing & <span>Cuidado Automóvel</span></h1>
                 <p>Especialistas na renovação estética e proteção avançada do seu veículo. Veja abaixo os nossos trabalhos em destaque ou consulte o precário completo.</p>
-                <!-- Botão alterado para guiar para baixo onde estão os preços -->
                 <a href="#servicos" class="btn-main" style="padding: 14px 32px; font-size: 1.1rem; display: inline-block;">Ver Precário & Serviços</a>
             </div>
             <div class="hero-logo-box">
-                <img src="Capa2.png" alt="Pepper Wash Auto Detailing Capa" class="capa2-img" onerror="this.src='logo.png'">
+                <!-- Imagem Capa2.png inserida no lugar do logo grande -->
+                <img src="Capa2.png" alt="Pepper Wash Capa 2" class="capa2-large-img" onerror="this.src='logo.png'">
             </div>
         </div>
     </section>
@@ -784,7 +786,7 @@
 
     <!-- RODAPÉ -->
     <footer>
-        <p>&copy; 2026 Pepper Wash - Auto Detailing. Todos os direitos reservados. Conhecimento • Paixão • Perfeição.</p>
+        <p>&copy; 2026 Pepper Wash - Auto Detailing. Todos os dados reservados. Conhecimento • Paixão • Perfeição.</p>
     </footer>
 
     <!-- SCRIPTS -->
