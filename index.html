@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pepper Wash | Detalhe e Cuidado Automóvel</title>
+    <title>Pepper Wash | Auto Detailing & Serviços</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #ff334b;
-            --primary-glow: rgba(255, 51, 75, 0.4);
-            --dark-bg: #090a0f;
-            --card-bg: #13151c;
-            --border-color: #222634;
+            --primary: #ff1e38;
+            --primary-glow: rgba(255, 30, 56, 0.4);
+            --dark-bg: #07080a;
+            --card-bg: #12151c;
+            --border-color: #222736;
             --text-main: #ffffff;
             --text-muted: #94a3b8;
         }
@@ -37,7 +37,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(9, 10, 15, 0.85);
+            background: rgba(7, 8, 10, 0.9);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border-color);
             z-index: 1000;
@@ -46,23 +46,22 @@
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 15px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .logo {
-            font-size: 1.6rem;
+        .logo-text {
+            font-size: 1.4rem;
             font-weight: 800;
             letter-spacing: 1px;
             color: #fff;
             text-decoration: none;
         }
 
-        .logo span {
+        .logo-text span {
             color: var(--primary);
-            text-shadow: 0 0 15px var(--primary-glow);
         }
 
         .nav-buttons {
@@ -72,7 +71,7 @@
         }
 
         .btn-main {
-            background: linear-gradient(135deg, #ff334b 0%, #d91c33 100%);
+            background: linear-gradient(135deg, #ff1e38 0%, #c51126 100%);
             color: #fff;
             padding: 10px 24px;
             border-radius: 8px;
@@ -89,11 +88,11 @@
 
         .social-btn {
             color: #fff;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             background: var(--card-bg);
             border: 1px solid var(--border-color);
-            width: 42px;
-            height: 42px;
+            width: 40px;
+            height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -114,8 +113,8 @@
             align-items: center;
             position: relative;
             padding: 140px 20px 80px;
-            background: radial-gradient(circle at 70% 30%, rgba(255, 51, 75, 0.08) 0%, transparent 50%),
-                        linear-gradient(180deg, var(--dark-bg) 0%, #050608 100%);
+            background: radial-gradient(circle at 70% 30%, rgba(255, 30, 56, 0.1) 0%, transparent 60%),
+                        linear-gradient(180deg, var(--dark-bg) 0%, #030405 100%);
         }
 
         .hero-content {
@@ -123,13 +122,13 @@
             margin: 0 auto;
             width: 100%;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.2fr 0.8fr;
             gap: 50px;
             align-items: center;
         }
 
         .hero-text h1 {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             font-weight: 800;
             line-height: 1.1;
             margin-bottom: 20px;
@@ -146,53 +145,49 @@
             line-height: 1.6;
         }
 
-        .hero-badge {
-            display: inline-block;
-            background: rgba(255, 51, 75, 0.1);
-            color: var(--primary);
-            padding: 6px 14px;
-            border-radius: 20px;
+        .moto {
+            display: inline-flex;
+            gap: 15px;
+            background: rgba(255, 30, 56, 0.08);
+            border: 1px solid rgba(255, 30, 56, 0.2);
+            padding: 8px 18px;
+            border-radius: 30px;
             font-size: 0.9rem;
             font-weight: 600;
+            color: var(--primary);
             margin-bottom: 20px;
-            border: 1px solid rgba(255, 51, 75, 0.2);
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
-        /* GALERIA / ESTILO INSTAGRAM FEED */
-        .showcase {
-            position: relative;
-            height: 420px;
+        /* LOGO CARD DISPLAY */
+        .hero-logo-box {
             background: var(--card-bg);
-            border-radius: 20px;
             border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            position: relative;
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
         }
 
-        .showcase img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .showcase:hover img {
-            transform: scale(1.05);
-        }
-
-        .showcase-overlay {
+        .hero-logo-box::before {
+            content: '';
             position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 25px;
-            background: linear-gradient(to top, rgba(9, 10, 15, 0.95), transparent);
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
+            top: 0; left: 0; width: 100%; height: 4px;
+            background: var(--primary);
+            box-shadow: 0 0 15px var(--primary);
         }
 
-        /* SEÇÃO DE SERVIÇOS */
+        .logo-img {
+            width: 100%;
+            max-height: 380px;
+            object-fit: contain;
+            border-radius: 12px;
+        }
+
+        /* SERVIÇOS */
         .services-section {
             padding: 100px 20px;
             max-width: 1200px;
@@ -208,6 +203,12 @@
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .section-title h2 span {
+            color: var(--primary);
         }
 
         .section-title p {
@@ -217,70 +218,85 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
         }
 
         .service-card {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
-            padding: 40px;
-            border-radius: 16px;
+            padding: 35px 25px;
+            border-radius: 14px;
             transition: all 0.3s ease;
             position: relative;
-            overflow: hidden;
         }
 
         .service-card:hover {
             transform: translateY(-5px);
             border-color: var(--primary);
-            box-shadow: 0 10px 30px rgba(255, 51, 75, 0.1);
+            box-shadow: 0 10px 30px rgba(255, 30, 56, 0.15);
         }
 
         .service-card i {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             color: var(--primary);
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .service-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
         }
 
         .service-card p {
             color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 25px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .service-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: gap 0.2s;
+        }
+
+        .service-link:hover {
+            gap: 8px;
         }
 
         /* ÁREA DE MARCAÇÃO CTA */
         .cta-section {
-            padding: 80px 20px 120px;
+            padding: 60px 20px 120px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .cta-box {
-            background: linear-gradient(135deg, #13151c 0%, #1a1e29 100%);
+            background: linear-gradient(135deg, #12151c 0%, #1a1e29 100%);
             border: 1px solid var(--border-color);
-            border-radius: 24px;
-            padding: 60px;
+            border-radius: 20px;
+            padding: 60px 40px;
             text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
             position: relative;
-            overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
         }
 
         .cta-box h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            font-size: 2.3rem;
+            margin-bottom: 15px;
         }
 
         .cta-box p {
             color: var(--text-muted);
             max-width: 600px;
-            margin: 0 auto 35px;
+            margin: 0 auto 30px;
             font-size: 1.1rem;
         }
 
@@ -290,7 +306,7 @@
             padding: 40px 20px;
             text-align: center;
             color: var(--text-muted);
-            background: #050608;
+            background: #030405;
             font-size: 0.9rem;
         }
 
@@ -299,11 +315,11 @@
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-            .hero-text h1 {
-                font-size: 2.8rem;
-            }
-            .hero-badge {
+            .moto {
                 margin: 0 auto 20px;
+            }
+            .hero-text h1 {
+                font-size: 2.5rem;
             }
         }
     </style>
@@ -313,7 +329,7 @@
     <!-- CABEÇALHO -->
     <header>
         <div class="nav-container">
-            <a href="#" class="logo">PEPPER<span>WASH</span></a>
+            <a href="#" class="logo-text">PEPPER<span>WASH</span></a>
             <div class="nav-buttons">
                 <a href="https://www.instagram.com/pepperwash87?stkn=b3premN0cjZoM3Jv" target="_blank" class="social-btn" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://pepper-wash.buk.pt" target="_blank" class="btn-main">Marcar Agora</a>
@@ -325,49 +341,82 @@
     <section class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <span class="hero-badge"><i class="fa-solid fa-sparkles"></i> Detalhe & Cuidado Automóvel</span>
-                <h1>A Excelência que o seu Veículo <span>Merece</span></h1>
-                <p>Serviços profissionais especializados de lavagem e detalhe. Transformamos a estética do seu automóvel com máxima exigência e comodidade digital.</p>
+                <div class="moto">Conhecimento • Paixão • Perfeição</div>
+                <h1>Auto Detailing & <span>Cuidado Automóvel</span></h1>
+                <p>Especialistas na renovação estética e proteção do seu veículo. Serviços profissionais de alta precisão com agendamento online rápido e cómodo.</p>
                 <a href="https://pepper-wash.buk.pt" target="_blank" class="btn-main" style="padding: 14px 32px; font-size: 1.1rem;">Agendar no Buk.pt</a>
             </div>
-            <div class="showcase">
-                <img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=1000&q=80" alt="Pepper Wash Detalhe Automóvel">
-                <div class="showcase-overlay">
-                    <div>
-                        <h4 style="font-weight: 600; font-size: 1.1rem;">@pepperwash87</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-muted);">Trabalhos em destaque</p>
-                    </div>
-                    <a href="https://www.instagram.com/pepperwash87?stkn=b3premN0cjZoM3Jv" target="_blank" style="color: #fff; background: rgba(255,255,255,0.1); padding: 8px 14px; border-radius: 6px; font-size: 0.85rem; text-decoration: none; backdrop-filter: blur(5px);">Ver Instagram</a>
-                </div>
+            <div class="hero-logo-box">
+                <!-- Logótipo Oficial da Empresa -->
+                <img src="1000093458.jpg" alt="Pepper Wash Auto Detailing Logo" class="logo-img" onerror="this.src='https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=800&q=80'">
             </div>
         </div>
     </section>
 
-    <!-- SERVIÇOS -->
+    <!-- SERVIÇOS (TODOS OS 8 DO LOGÓTIPO) -->
     <section class="services-section" id="servicos">
         <div class="section-title">
-            <h2>Os Nossos Serviços</h2>
-            <p>Soluções profissionais adaptadas para cada necessidade</p>
+            <h2>Os Nossos <span>Serviços</span></h2>
+            <p>Tratamentos especializados para manter o seu veículo impecável</p>
         </div>
         <div class="services-grid">
+            
             <div class="service-card">
                 <i class="fa-solid fa-car-side"></i>
-                <h3>Lavagem Exterior Detalhada</h3>
-                <p>Processo rigoroso de lavagem manual, aplicação de espuma ativa, limpeza minuciosa de jantes e cavas, com acabamento e secagem protegida.</p>
-                <a href="https://pepper-wash.buk.pt" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 600; font-size: 0.95rem;">Marcar este serviço &rarr;</a>
+                <h3>Lavagem Exterior</h3>
+                <p>Lavagem manual cuidada, remoção de contaminações e secagem detalhada.</p>
+                <a href="https://pepper-wash.buk.pt" target="_blank" class="service-link">Marcar serviço &rarr;</a>
             </div>
+
             <div class="service-card">
                 <i class="fa-solid fa-spray-can-sparkles"></i>
-                <h3>Limpeza Interior Profunda</h3>
-                <p>Aspiração profunda, higienização de plásticos, tratamento e limpeza dedicada de estofos e peles, eliminando oidade e odores.</p>
-                <a href="https://pepper-wash.buk.pt" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 600; font-size: 0.95rem;">Marcar este serviço &rarr;</a>
+                <h3>Lavagem Interior</h3>
+                <p>Aspiração profunda, limpeza de tablier, plásticos e higienização geral.</p>
+                <a href="https://pepper-wash.buk.pt" target="_blank" class="service-link">Marcar serviço &rarr;</a>
             </div>
+
             <div class="service-card">
                 <i class="fa-solid fa-gem"></i>
-                <h3>Pack Completo Premium</h3>
-                <p>A experiência total de renovação automóvel, combinando o detalhe exterior avançado com a limpeza e higienização integral do interior.</p>
-                <a href="https://pepper-wash.buk.pt" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 600; font-size: 0.95rem;">Marcar este serviço &rarr;</a>
+                <h3>Lavagem Completa</h3>
+                <p>A solução integral que une o cuidado exterior e a limpeza profunda interior.</p>
+                <a href="https://pepper-wash.buk.pt" target="_blank" class="service-link">Marcar serviço &rarr;</a>
             </div>
+
+            <div class="service-card">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <h3>Polimento</h3>
+                <p>Correção de imperfeições da pintura, remoção de riscos e restauro de brilho.</p>
+                <a href="https://pepper-wash.buk.pt" target="_blank" class="service-link">Marcar serviço &rarr;</a>
+            </div>
+
+            <div class="service-card">
+                <i class="fa-solid fa-chair"></i>
+                <h3>Limpeza de Estofos</h3>
+                <p>Extração profunda de manchas, sujidade entrançada e odores em tecidos.</p>
+                <a href="https://pepper-wash.buk.pt" target="_blank" class="service-link">Marcar serviço &rarr;</a>
+            </div>
+
+            <div class="service-card">
+                <i class="fa-solid fa-lightbulb"></i>
+                <h3>Restauro de Faróis</h3>
+                <p>Recuperação da transparência e luminosidade de óticas baças ou amarelas.</p>
+                <a href="https://pepper-wash.buk.pt" target="_blank" class="service-link">Marcar serviço &rarr;</a>
+            </div>
+
+            <div class="service-card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Restauro de Couro</h3>
+                <p>Limpeza técnica, reparação e hidratação profunda de superfícies em pele.</p>
+                <a href="https://pepper-wash.buk.pt" target="_blank" class="service-link">Marcar serviço &rarr;</a>
+            </div>
+
+            <div class="service-card">
+                <i class="fa-solid fa-circle-notch"></i>
+                <h3>Reparação de Jantes</h3>
+                <p>Tratamento estético e recuperação especializada de jantes danificadas.</p>
+                <a href="https://pepper-wash.buk.pt" target="_blank" class="service-link">Marcar serviço &rarr;</a>
+            </div>
+
         </div>
     </section>
 
@@ -375,14 +424,14 @@
     <section class="cta-section">
         <div class="cta-box">
             <h2>Pronto para agendar o seu serviço?</h2>
-            <p>Aceda diretamente ao nosso sistema online oficial em <strong>pepper-wash.buk.pt</strong>, escolha a data, a hora e o serviço pretendido de forma totalmente automatizada.</p>
+            <p>Aceda diretamente ao nosso calendário oficial em <strong>pepper-wash.buk.pt</strong>, escolha o dia e a hora mais convenientes.</p>
             <a href="https://pepper-wash.buk.pt" target="_blank" class="btn-main" style="font-size: 1.1rem; padding: 14px 35px;">Aceder ao Sistema de Marcação</a>
         </div>
     </section>
 
     <!-- RODAPÉ -->
     <footer>
-        <p>&copy; 2026 Pepper Wash. Todos os direitos reservados. Atendimento por região.</p>
+        <p>&copy; 2026 Pepper Wash - Auto Detailing. Todos os direitos reservados. Conhecimento • Paixão • Perfeição.</p>
     </footer>
 
 </body>
