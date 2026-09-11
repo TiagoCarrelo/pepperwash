@@ -232,7 +232,7 @@
             50% { transform: translateY(-10px); }
         }
 
-        /* SECÇÃO DE SERVIÇOS E PRECÁRIO (ESTILO STARWASH) */
+        /* SECÇÃO DE SERVIÇOS E PRECÁRIO */
         .services-section {
             padding: 100px 20px;
             max-width: 1200px;
@@ -341,7 +341,39 @@
             color: #fff;
         }
 
-        /* BANNER DE CHAMADA BUK */
+        /* SECÇÃO DE VÍDEOS DO INSTAGRAM */
+        .instagram-feed-section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .instagram-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .instagram-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px;
+            width: 100%;
+            max-width: 350px;
+            text-align: center;
+        }
+
+        .instagram-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        /* BANNER DE MARCAÇÃO */
         .cta-section {
             padding: 60px 20px 120px;
             max-width: 1200px;
@@ -407,6 +439,7 @@
             </a>
             <ul class="nav-menu">
                 <li><a href="#servicos">Serviços & Precário</a></li>
+                <li><a href="#trabalhos">Trabalhos (Instagram)</a></li>
                 <li><a href="https://pepper-wash.buk.pt" target="_blank">Calendário Buk</a></li>
             </ul>
             <div class="nav-buttons">
@@ -431,7 +464,7 @@
         </div>
     </section>
 
-    <!-- SERVIÇOS E PRECÁRIO (ESTILO STARWASH) -->
+    <!-- SERVIÇOS E PRECÁRIO -->
     <section class="services-section" id="servicos">
         <div class="section-title">
             <h2>Nossos <span>Serviços & Precário</span></h2>
@@ -479,7 +512,7 @@
                 <div>
                     <i class="fa-solid fa-wand-magic-sparkles service-icon"></i>
                     <h3>Polimento</h3>
-                    <p>Correção de defeitos e micro-riscos na pintura, remoção de oxidação e restauro profundo do brilho e reflexho original da carroçaria.</p>
+                    <p>Correção de defeitos e micro-riscos na pintura, remoção de oxidação e restauro profundo do brilho e reflexo original da carroçaria.</p>
                 </div>
                 <div class="service-footer">
                     <div class="price-tag">Sob Consulta <span>Orçamento dedicado</span></div>
@@ -537,6 +570,28 @@
 
         </div>
     </section>
+
+    <!-- SECÇÃO DE VÍDEOS / REELS DO INSTAGRAM -->
+    <section class="instagram-feed-section" id="trabalhos">
+        <div class="section-title">
+            <h2>Nossos Trabalhos em <span>Vídeo</span></h2>
+            <p>Acompanhe os resultados reais publicados no nosso Instagram @pepperwash87</p>
+        </div>
+        <div class="instagram-grid">
+            <!-- Exemplo de incorporação de Reel do Instagram -->
+            <div class="instagram-card">
+                <p><i class="fa-brands fa-instagram" style="color: var(--primary);"></i> Veja o nosso processo no Instagram</p>
+                <!-- Substitua o link abaixo pelo link do seu post/reel real do Instagram -->
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/pepperwash87/" data-instgrm-version="14" style="background:#12151c; border:0; border-radius:12px; margin:0 auto; max-width:320px; width:100%;"></blockquote>
+            </div>
+        </div>
+        <div style="margin-top: 30px;">
+            <a href="https://www.instagram.com/pepperwash87" target="_blank" class="btn-main" style="background: transparent; border: 1px solid var(--primary); color: #fff;">Ver mais no Instagram</a>
+        </div>
+    </section>
+
+    <!-- SCRIPT OFICIAL DO INSTAGRAM PARA CARREGAR OS VÍDEOS -->
+    <script async src="//www.instagram.com/embed.js"></script>
 
     <!-- BANNER DE MARCAÇÃO -->
     <section class="cta-section">
