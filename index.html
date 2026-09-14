@@ -333,7 +333,7 @@
             border-color: var(--primary);
         }
 
-        /* SERVIÇOS & Preçário */
+        /* SERVIÇOS & PRECÁRIO */
         .services-section {
             padding: 80px 20px 100px;
             max-width: 1200px;
@@ -418,6 +418,26 @@
         .btn-card-book:hover {
             background: var(--primary);
             color: #fff;
+        }
+
+        .btn-card-call {
+            background: rgba(255, 222, 0, 0.1);
+            color: var(--partner-yellow);
+            border: 1px solid rgba(255, 222, 0, 0.3);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-card-call:hover {
+            background: var(--partner-yellow);
+            color: #000;
         }
 
         /* SECÇÃO DE PARCERIA OFICIAL */
@@ -526,6 +546,26 @@
             font-size: 1.1rem;
         }
 
+        .locations-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .location-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .location-item i {
+            color: var(--primary);
+        }
+
         /* RODAPÉ */
         footer {
             border-top: 1px solid var(--border-color);
@@ -575,7 +615,7 @@
             </a>
             <ul class="nav-menu">
                 <li><a href="#trabalhos">Trabalhos</a></li>
-                <li><a href="#servicos">Serviços & Preçário</a></li>
+                <li><a href="#servicos">Serviços & Precário</a></li>
                 <li><a href="#parceria">Parceria</a></li>
                 <li><a href="https://pepperwash.buk.pt" target="_blank">Reservas</a></li>
             </ul>
@@ -592,8 +632,8 @@
             <div class="hero-text">
                 <div class="moto">Conhecimento • Paixão • Perfeição</div>
                 <h1>Auto Detailing & <span>Cuidado Automóvel</span></h1>
-                <p>Especialistas na renovação estética e proteção avançada do seu veículo. Veja abaixo os nossos trabalhos em destaque ou consulte o preçário completo.</p>
-                <a href="#servicos" class="btn-main" style="padding: 14px 32px; font-size: 1.1rem; background: transparent; border: 2px solid var(--primary);">Ver Preçário & Serviços</a>
+                <p>Especialistas na renovação estética e proteção avançada do seu veículo. Veja abaixo os nossos trabalhos em destaque ou consulte o precário completo.</p>
+                <a href="#servicos" class="btn-main" style="padding: 14px 32px; font-size: 1.1rem; background: transparent; border: 2px solid var(--primary);">Ver Precário & Serviços[cite: 1]</a>
             </div>
             <div class="hero-logo-box">
                 <img src="perfil.png" alt="Pepper Wash Auto Detailing Perfil" class="perfil-img" onerror="this.src='logo.png'">
@@ -622,10 +662,10 @@
 
     <script async src="//www.instagram.com/embed.js"></script>
 
-    <!-- CATÁLOGO DE SERVIÇOS E Preçário -->
+    <!-- CATÁLOGO DE SERVIÇOS E PRECÁRIO -->
     <section class="services-section" id="servicos">
         <div class="section-title">
-            <h2>Nossos <span>Serviços & Preçários</span></h2>
+            <h2>Nossos <span>Serviços & Precário</span></h2>
             <p>Informação completa de tratamentos com margens indicativas de preço</p>
         </div>
         <div class="services-grid">
@@ -637,7 +677,7 @@
                     <p>Lavagem manual rigorosa, pré-lavagem com espuma ativa, limpeza detalhada de jantes e cavas, com secagem por toque zero.</p>
                 </div>
                 <div class="service-footer">
-                    <div class="price-tag">A partir de 15€ <span>Margem estimada</span></div>
+                    <div class="price-tag">A partir de 15€ <span>Margem estimada</span>[cite: 1]</div>
                     <a href="https://pepperwash.buk.pt" target="_blank" class="btn-card-book">Reservar</a>
                 </div>
             </div>
@@ -649,7 +689,7 @@
                     <p>Aspiração profunda de habitáculo e bagageira, limpeza e condicionamento de tablier e plásticos, e higienização geral de superfícies.</p>
                 </div>
                 <div class="service-footer">
-                    <div class="price-tag">A partir de 30€ <span>Margem estimada</span></div>
+                    <div class="price-tag">A partir de 30€ <span>Margem estimada</span>[cite: 1]</div>
                     <a href="https://pepperwash.buk.pt" target="_blank" class="btn-card-book">Reservar</a>
                 </div>
             </div>
@@ -661,7 +701,7 @@
                     <p>A solução integral que junta a lavagem exterior detalhada com a limpeza profunda interior. O cuidado total para o dia a dia.</p>
                 </div>
                 <div class="service-footer">
-                    <div class="price-tag">A partir de 40€ <span>Margem estimada</span></div>
+                    <div class="price-tag">A partir de 40€ <span>Margem estimada</span>[cite: 1]</div>
                     <a href="https://pepperwash.buk.pt" target="_blank" class="btn-card-book">Reservar</a>
                 </div>
             </div>
@@ -673,8 +713,8 @@
                     <p>Correção de defeitos e micro-riscos na pintura, remoção de oxidação e restauro profundo do brilho e reflexo original da carroçaria.</p>
                 </div>
                 <div class="service-footer">
-                    <div class="price-tag">Sob Consulta <span>Orçamento dedicado</span></div>
-                    <a href="https://pepperwash.buk.pt" target="_blank" class="btn-card-book">Reservar</a>
+                    <div class="price-tag">Sob Consulta <span>Orçamento dedicado</span>[cite: 1]</div>
+                    <a href="tel:+351936763949" class="btn-card-call"><i class="fa-solid fa-phone"></i> Ligar</a>
                 </div>
             </div>
 
@@ -687,7 +727,7 @@
                 </div>
                 <div class="service-footer">
                     <div class="price-tag">Sob Consulta <span>Orçamento dedicado</span></div>
-                    <a href="https://pepperwash.buk.pt" target="_blank" class="btn-card-book">Reservar</a>
+                    <a href="tel:+351936763949" class="btn-card-call"><i class="fa-solid fa-phone"></i> Ligar</a>
                 </div>
             </div>
 
@@ -698,7 +738,7 @@
                     <p>Extração profunda por injetora-extratora para remoção de manchas persistentes, sujidade entrançada e odores em estofos de tecido.</p>
                 </div>
                 <div class="service-footer">
-                    <div class="price-tag">A partir de 50€ <span>Margem estimada</span></div>
+                    <div class="price-tag">A partir de 50€ <span>Margem estimada</span>[cite: 1]</div>
                     <a href="https://pepperwash.buk.pt" target="_blank" class="btn-card-book">Reservar</a>
                 </div>
             </div>
@@ -710,7 +750,7 @@
                     <p>Lixagem técnica, polimento e aplicação de proteção UV para recuperar a transparência e o alcance luminoso de óticas baças.</p>
                 </div>
                 <div class="service-footer">
-                    <div class="price-tag">A partir de 40€ <span>Par de óticas</span></div>
+                    <div class="price-tag">A partir de 40€ <span>Par de óticas</span>[cite: 1]</div>
                     <a href="https://pepperwash.buk.pt" target="_blank" class="btn-card-book">Reservar</a>
                 </div>
             </div>
@@ -722,7 +762,7 @@
                     <p>Limpeza técnica especializada de peles, reparação de pequenas fissuras e aplicação de bálsamo de hidratação e proteção nutridora.</p>
                 </div>
                 <div class="service-footer">
-                    <div class="price-tag">Sub Consulta <span>Orçamento dedicado</span></div>
+                    <div class="price-tag">A partir de 60€ <span>Margem estimada</span>[cite: 1]</div>
                     <a href="https://pepperwash.buk.pt" target="_blank" class="btn-card-book">Reservar</a>
                 </div>
             </div>
@@ -734,8 +774,8 @@
                     <p>Tratamento estético especializado e recuperação de danos superficiais ou amassadelas ligeiras nas jantes da viatura.</p>
                 </div>
                 <div class="service-footer">
-                    <div class="price-tag">Sob Consulta <span>Orçamento dedicado</span></div>
-                    <a href="https://pepperwash.buk.pt" target="_blank" class="btn-card-book">Reservar</a>
+                    <div class="price-tag">Sob Consulta <span>Orçamento dedicado</span>[cite: 1]</div>
+                    <a href="tel:+351936763949" class="btn-card-call"><i class="fa-solid fa-phone"></i> Ligar</a>
                 </div>
             </div>
 
@@ -750,9 +790,9 @@
             </div>
             <div class="partner-info">
                 <span class="badge-partner">Parceria Oficial</span>
-                <h3>BRM <span>PERFORMANCE</span></h3>
+                <h3>BRM <span>PERFORMANCE</span>[cite: 1]</h3>
                 <p>Unimos forças com os melhores especialistas em performance automóvel para garantir que o seu veículo não só brilha por fora com o nosso detailing de excelência, mas também conta com o melhor suporte técnico e mecânico de topo.</p>
-                <a href="https://pepperwash.buk.pt" target="_blank" class="btn-main" style="background: linear-gradient(135deg, #ffde00 0%, #cca800 100%); color: #000; font-weight: 700;">Saber Mais & Reservar</a>
+                <a href="https://pepperwash.buk.pt" target="_blank" class="btn-main" style="background: linear-gradient(135deg, #ffde00 0%, #cca800 100%); color: #000; font-weight: 700;">Saber Mais & Reservar[cite: 1]</a>
             </div>
         </div>
     </section>
@@ -762,13 +802,26 @@
         <div class="cta-box">
             <h2>Pronto para transformar o seu veículo?</h2>
             <p>Selecione o serviço pretendido, consulte os horários disponíveis e garanta a sua reserva de forma rápida e cómoda.</p>
-            <a href="https://pepperwash.buk.pt" target="_blank" class="btn-main" style="font-size: 1.1rem; padding: 14px 35px;">Reservar</a>
+            <a href="https://pepperwash.buk.pt" target="_blank" class="btn-main" style="font-size: 1.1rem; padding: 14px 35px; margin-bottom: 25px; display: inline-block;">Reservar[cite: 1]</a>
+            
+            <!-- INFORMAÇÕES DE LOCALIZAÇÃO E TELEFONE -->
+            <div class="locations-info">
+                <div class="location-item">
+                    <i class="fa-solid fa-location-dot"></i> Famões
+                </div>
+                <div class="location-item">
+                    <i class="fa-solid fa-location-dot"></i> Belas
+                </div>
+                <div class="location-item">
+                    <i class="fa-solid fa-phone"></i> <a href="tel:+351936763949" style="color: inherit; text-decoration: none;">+351 936 763 949</a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- RODAPÉ -->
     <footer>
-        <p>&copy; 2026 Pepper Wash - Auto Detailing. Todos os direitos reservados. Conhecimento • Paixão • Perfeição.</p>
+        <p>&copy; 2026 Pepper Wash - Auto Detailing. Todos os direitos reservados. Conhecimento • Paixão • Perfeição.[cite: 1]</p>
     </footer>
 
     <!-- SCRIPTS -->
