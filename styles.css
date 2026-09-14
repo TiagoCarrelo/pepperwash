@@ -15,12 +15,15 @@
     box-sizing: border-box;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     scroll-behavior: smooth;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 body {
     background-color: var(--dark);
     color: var(--text-main);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* HEADER / NAVBAR */
@@ -38,14 +41,14 @@ header {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
     font-weight: 800;
     letter-spacing: 1px;
     color: #fff;
@@ -59,7 +62,7 @@ header {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 25px;
     align-items: center;
 }
 
@@ -83,6 +86,7 @@ header {
     text-decoration: none;
     transition: background 0.3s, transform 0.2s;
     display: inline-block;
+    text-align: center;
 }
 
 .btn-cta:hover {
@@ -97,22 +101,22 @@ header {
 
 /* HERO SECTION */
 .hero {
-    height: 90vh;
+    min-height: 90vh;
     background: linear-gradient(rgba(7, 8, 10, 0.7), rgba(7, 8, 10, 0.9)), url('https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
     display: flex;
     align-items: center;
     text-align: center;
-    padding-top: 80px;
+    padding: 120px 20px 80px;
 }
 
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 20px;
+    width: 100%;
 }
 
 .hero h1 {
-    font-size: 3.2rem;
+    font-size: clamp(2rem, 5vw, 3.2rem);
     font-weight: 800;
     margin-bottom: 20px;
     line-height: 1.2;
@@ -123,7 +127,7 @@ header {
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     color: var(--text-muted);
     margin-bottom: 35px;
 }
@@ -145,6 +149,7 @@ header {
     text-decoration: none;
     transition: background 0.3s;
     display: inline-block;
+    text-align: center;
 }
 
 .btn-secondary:hover {
@@ -153,38 +158,38 @@ header {
 
 /* SECÕES GERAIS */
 .section-container {
-    padding: 100px 20px;
+    padding: 80px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 .section-header h2 {
-    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 3.5vw, 2.2rem);
     font-weight: 700;
     margin-bottom: 15px;
 }
 
 .section-header p {
     color: var(--text-muted);
-    font-size: 1.1rem;
+    font-size: clamp(0.95rem, 1.5vw, 1.1rem);
 }
 
 /* SERVIÇOS */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
 .service-card {
     background: var(--card-bg);
     border: 1px solid var(--border);
-    padding: 40px 30px;
+    padding: 35px 25px;
     border-radius: 12px;
     transition: transform 0.3s, border-color 0.3s;
 }
@@ -201,7 +206,7 @@ header {
 }
 
 .service-card h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-bottom: 15px;
 }
 
@@ -211,9 +216,9 @@ header {
     margin-bottom: 20px;
 }
 
-/* ÁREA DE ATUAÇÃO */
+/* ÁREA DE ATUAÇÃO (Famões e Rio de Mouro) */
 .region-section {
-    padding: 100px 20px;
+    padding: 80px 20px;
     background: rgba(22, 25, 32, 0.4);
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
@@ -221,7 +226,7 @@ header {
 
 .region-content {
     text-align: center;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
@@ -233,7 +238,7 @@ header {
 
 .region-content p {
     color: var(--text-muted);
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 1.8vw, 1.1rem);
     margin-bottom: 30px;
 }
 
@@ -242,12 +247,12 @@ header {
     background: linear-gradient(135deg, #161920 0%, #1f2430 100%);
     border: 1px solid var(--border);
     border-radius: 16px;
-    padding: 60px 40px;
+    padding: 50px 20px;
     text-align: center;
 }
 
 .booking-banner h2 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 4vw, 2.5rem);
     margin-bottom: 20px;
 }
 
@@ -255,14 +260,14 @@ header {
     color: var(--text-muted);
     max-width: 600px;
     margin: 0 auto 30px;
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 1.8vw, 1.1rem);
 }
 
 /* RODAPÉ */
 footer {
     background: var(--darker);
     border-top: 1px solid var(--border);
-    padding: 50px 20px 30px;
+    padding: 40px 20px;
     text-align: center;
     color: var(--text-muted);
 }
@@ -273,7 +278,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .social-icons {
@@ -291,7 +296,22 @@ footer {
     color: var(--primary);
 }
 
-@media(max-width: 768px) {
-    .hero h1 { font-size: 2.3rem; }
-    .nav-links { display: none; }
+/* MEDIA QUERIES PARA DISPOSITIVOS MÓVEIS */
+@media (max-width: 768px) {
+    .nav-links { 
+        display: none; /* Podes integrar um menu hambúrguer mobile se necessário */
+    }
+    
+    .hero {
+        height: auto;
+        min-height: 80vh;
+    }
+
+    .section-container, .region-section {
+        padding: 60px 15px;
+    }
+
+    .booking-banner {
+        padding: 40px 15px;
+    }
 }
