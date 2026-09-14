@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pepper Wash | Auto Detailing & Serviços Profissionais</title>
+    <title>Pepper Wash | Quem Somos & Auto Detailing</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
@@ -11,6 +11,7 @@
             --primary: #ff1e38;
             --primary-glow: rgba(255, 30, 56, 0.4);
             --partner-yellow: #ffde00;
+            --whatsapp-green: #25d366;
             --dark-bg: #07080a;
             --card-bg: #12151c;
             --border-color: #222736;
@@ -210,7 +211,7 @@
             color: var(--primary);
         }
 
-        /* HERO SECTION COM PERFIL.PNG */
+        /* HERO SECTION */
         .hero {
             min-height: 85vh;
             display: flex;
@@ -265,13 +266,14 @@
 
         .hero-logo-box {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            gap: 20px;
         }
 
         .perfil-img {
             width: 100%;
-            max-width: 420px;
+            max-width: 320px;
             border-radius: 16px;
             object-fit: cover;
             border: 2px solid var(--border-color);
@@ -282,6 +284,102 @@
         .perfil-img:hover {
             transform: scale(1.02);
             border-color: var(--primary);
+        }
+
+        .btn-about-hero {
+            background: rgba(255, 30, 56, 0.12);
+            color: #fff;
+            border: 1px solid rgba(255, 30, 56, 0.4);
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+        }
+
+        .btn-about-hero:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+
+        /* SECÇÃO "QUEM SOMOS" (NOVA PÁGINA / BLOCO DEDICADO) */
+        .about-section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .about-text h2 span {
+            color: var(--primary);
+        }
+
+        .about-text p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .about-feature-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .about-feature-item i {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .about-feature-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .about-feature-item p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+            text-align: center;
+        }
+
+        .about-image-wrapper img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 20px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.7);
         }
 
         /* TRABALHOS RECENTES EM DESTAQUE */
@@ -420,7 +518,7 @@
             color: #fff;
         }
 
-        .btn-card-call {
+        .contact-options-btn {
             background: rgba(255, 222, 0, 0.1);
             color: var(--partner-yellow);
             border: 1px solid rgba(255, 222, 0, 0.3);
@@ -428,14 +526,14 @@
             border-radius: 6px;
             font-weight: 600;
             font-size: 0.85rem;
-            text-decoration: none;
+            cursor: pointer;
             transition: all 0.2s;
             display: inline-flex;
             align-items: center;
             gap: 6px;
         }
 
-        .btn-card-call:hover {
+        .contact-options-btn:hover {
             background: var(--partner-yellow);
             color: #000;
         }
@@ -542,7 +640,7 @@
         .cta-box p {
             color: var(--text-muted);
             max-width: 600px;
-            margin: 0 auto 30px;
+            margin: 0 auto 25px;
             font-size: 1.1rem;
         }
 
@@ -550,7 +648,7 @@
             display: flex;
             justify-content: center;
             gap: 30px;
-            margin-top: 25px;
+            margin-top: 20px;
             flex-wrap: wrap;
         }
 
@@ -566,6 +664,129 @@
             color: var(--primary);
         }
 
+        .hours-info {
+            background: rgba(255, 30, 56, 0.05);
+            border: 1px solid rgba(255, 30, 56, 0.2);
+            border-radius: 12px;
+            padding: 15px;
+            max-width: 500px;
+            margin: 20px auto 0;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .hours-info i {
+            color: var(--primary);
+            margin-right: 8px;
+        }
+
+        /* MODAL DE CONTACTOS */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(8px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.active .modal-card {
+            transform: scale(1);
+        }
+
+        .modal-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .modal-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+        }
+
+        .modal-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn-whatsapp {
+            background: var(--whatsapp-green);
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: opacity 0.2s;
+        }
+
+        .btn-whatsapp:hover {
+            opacity: 0.9;
+        }
+
+        .btn-call {
+            background: var(--partner-yellow);
+            color: #000;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: opacity 0.2s;
+        }
+
+        .btn-call:hover {
+            opacity: 0.9;
+        }
+
+        .modal-close {
+            margin-top: 15px;
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .modal-close:hover {
+            color: #fff;
+        }
+
         /* RODAPÉ */
         footer {
             border-top: 1px solid var(--border-color);
@@ -577,7 +798,7 @@
         }
 
         @media(max-width: 968px) {
-            .hero-content, .partner-box {
+            .hero-content, .partner-box, .about-grid {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
@@ -590,8 +811,11 @@
             .hero-text h1 {
                 font-size: 2.5rem;
             }
-            .partner-info {
+            .partner-info, .about-text {
                 text-align: center;
+            }
+            .about-features {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -606,6 +830,23 @@
         </div>
     </div>
 
+    <!-- MODAL DE ESCOLHA DE CONTACTO PARA SERVIÇOS SOB CONSULTA -->
+    <div class="modal-overlay" id="contactModal">
+        <div class="modal-card">
+            <h3>Fale Connosco</h3>
+            <p>Escolha como prefere entrar em contacto para obter o seu orçamento personalizado:</p>
+            <div class="modal-options">
+                <a href="https://wa.me/351936763949?text=Olá,%20gostaria%20de%20pedir%20um%20orçamento%20sob%20consulta." target="_blank" class="btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp fa-lg"></i> Enviar Mensagem WhatsApp
+                </a>
+                <a href="tel:+351936763949" class="btn-call">
+                    <i class="fa-solid fa-phone"></i> Fazer Chamada Telefónica
+                </a>
+            </div>
+            <button class="modal-close" onclick="closeContactModal()">Cancelar</button>
+        </div>
+    </div>
+
     <!-- NAVBAR DINÂMICA -->
     <header id="navbar">
         <div class="nav-container">
@@ -614,6 +855,7 @@
                 <div class="logo-text">PEPPER<span>WASH</span></div>
             </a>
             <ul class="nav-menu">
+                <li><a href="#quemsomos">Quem Somos</a></li>
                 <li><a href="#trabalhos">Trabalhos</a></li>
                 <li><a href="#servicos">Serviços & Precário</a></li>
                 <li><a href="#parceria">Parceria</a></li>
@@ -626,17 +868,48 @@
         </div>
     </header>
 
-    <!-- HERO SECTION COM PERFIL.PNG -->
+    <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-content">
             <div class="hero-text">
                 <div class="moto">Conhecimento • Paixão • Perfeição</div>
                 <h1>Auto Detailing & <span>Cuidado Automóvel</span></h1>
-                <p>Especialistas na renovação estética e proteção avançada do seu veículo. Veja abaixo os nossos trabalhos em destaque ou consulte o precário completo.</p>
-                <a href="#servicos" class="btn-main" style="padding: 14px 32px; font-size: 1.1rem; background: transparent; border: 2px solid var(--primary);">Ver Precário & Serviços[cite: 1]</a>
+                <p>Especialistas na renovação estética e proteção avançada do seu veículo. Conheça a nossa história, veja os trabalhos em destaque ou consulte o precário completo[cite: 1].</p>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                    <a href="#servicos" class="btn-main" style="padding: 14px 28px; font-size: 1.05rem;">Ver Precário & Serviços[cite: 1]</a>
+                    <a href="#quemsomos" class="btn-about-hero"><i class="fa-solid fa-users"></i> Quem Somos</a>
+                </div>
             </div>
             <div class="hero-logo-box">
                 <img src="perfil.png" alt="Pepper Wash Auto Detailing Perfil" class="perfil-img" onerror="this.src='logo.png'">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECÇÃO "QUEM SOMOS" -->
+    <section class="about-section" id="quemsomos">
+        <div class="about-grid">
+            <div class="about-text">
+                <span class="moto" style="margin-bottom: 15px;">A Nossa Identidade</span>
+                <h2>Quem <span>Somos</span></h2>
+                <p>Fundada com uma paixão inegável pelo detalhe automóvel e pela estética de excelência, a <strong>Pepper Wash</strong> nasceu para transformar a forma como cuida da sua viatura. Mais do que lavagens, oferecemos um tratamento de autor com foco absoluto na perfeição, proteção e valorização do seu automóvel.</p>
+                <p>Com instalações dinâmicas a operar em <strong>Famões</strong> e <strong>Belas</strong>[cite: 1], combinamos técnicas avançadas de polimento, micro pintura, estofos e uma dedicação técnica rigorosa apoiada por parcerias de prestígio como a BRM Performance.</p>
+                
+                <div class="about-features">
+                    <div class="about-feature-item">
+                        <i class="fa-solid fa-gem"></i>
+                        <h4>Rigor & Qualidade</h4>
+                        <p>Produtos de topo e métodos seguros para pintura e interiores.</p>
+                    </div>
+                    <div class="about-feature-item">
+                        <i class="fa-solid fa-bolt"></i>
+                        <h4>Serviço Dedicado</h4>
+                        <p>Acompanhamento personalizado em cada intervenção estética.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image-wrapper">
+                <img src="capa.png" alt="Pepper Wash Instalações e Detalhe Automóvel" onerror="this.src='perfil.png'">
             </div>
         </div>
     </section>
@@ -714,7 +987,7 @@
                 </div>
                 <div class="service-footer">
                     <div class="price-tag">Sob Consulta <span>Orçamento dedicado</span>[cite: 1]</div>
-                    <a href="tel:+351936763949" class="btn-card-call"><i class="fa-solid fa-phone"></i> Ligar</a>
+                    <button class="contact-options-btn" onclick="openContactModal()"><i class="fa-solid fa-headset"></i> Contactar</button>
                 </div>
             </div>
 
@@ -727,7 +1000,7 @@
                 </div>
                 <div class="service-footer">
                     <div class="price-tag">Sob Consulta <span>Orçamento dedicado</span></div>
-                    <a href="tel:+351936763949" class="btn-card-call"><i class="fa-solid fa-phone"></i> Ligar</a>
+                    <button class="contact-options-btn" onclick="openContactModal()"><i class="fa-solid fa-headset"></i> Contactar</button>
                 </div>
             </div>
 
@@ -775,7 +1048,7 @@
                 </div>
                 <div class="service-footer">
                     <div class="price-tag">Sob Consulta <span>Orçamento dedicado</span>[cite: 1]</div>
-                    <a href="tel:+351936763949" class="btn-card-call"><i class="fa-solid fa-phone"></i> Ligar</a>
+                    <button class="contact-options-btn" onclick="openContactModal()"><i class="fa-solid fa-headset"></i> Contactar</button>
                 </div>
             </div>
 
@@ -802,19 +1075,23 @@
         <div class="cta-box">
             <h2>Pronto para transformar o seu veículo?</h2>
             <p>Selecione o serviço pretendido, consulte os horários disponíveis e garanta a sua reserva de forma rápida e cómoda.</p>
-            <a href="https://pepperwash.buk.pt" target="_blank" class="btn-main" style="font-size: 1.1rem; padding: 14px 35px; margin-bottom: 25px; display: inline-block;">Reservar[cite: 1]</a>
+            <a href="https://pepperwash.buk.pt" target="_blank" class="btn-main" style="font-size: 1.1rem; padding: 14px 35px; display: inline-block;">Reservar[cite: 1]</a>
             
-            <!-- INFORMAÇÕES DE LOCALIZAÇÃO E TELEFONE -->
+            <!-- INFORMAÇÕES DE LOCALIZAÇÃO, TELEFONE E HORÁRIOS -->
             <div class="locations-info">
                 <div class="location-item">
-                    <i class="fa-solid fa-location-dot"></i> Famões
+                    <i class="fa-solid fa-location-dot"></i> Famões[cite: 1]
                 </div>
                 <div class="location-item">
-                    <i class="fa-solid fa-location-dot"></i> Belas
+                    <i class="fa-solid fa-location-dot"></i> Belas[cite: 1]
                 </div>
                 <div class="location-item">
-                    <i class="fa-solid fa-phone"></i> <a href="tel:+351936763949" style="color: inherit; text-decoration: none;">+351 936 763 949</a>
+                    <i class="fa-solid fa-phone"></i> <a href="tel:+351936763949" style="color: inherit; text-decoration: none;">+351 936 763 949</a>[cite: 1]
                 </div>
+            </div>
+
+            <div class="hours-info">
+                <i class="fa-regular fa-clock"></i> <strong>Horário de Atendimento:</strong> Segunda a Sábado | 09:00 - 19:00
             </div>
         </div>
     </section>
@@ -826,6 +1103,23 @@
 
     <!-- SCRIPTS -->
     <script>
+        // Funções para abrir e fechar o modal de contacto
+        function openContactModal() {
+            document.getElementById('contactModal').classList.add('active');
+        }
+
+        function closeContactModal() {
+            document.getElementById('contactModal').classList.remove('active');
+        }
+
+        // Fechar modal ao clicar fora dele
+        window.addEventListener('click', function(event) {
+            const modal = document.getElementById('contactModal');
+            if (event.target === modal) {
+                closeContactModal();
+            }
+        });
+
         // Transição suave do Splash Screen
         window.addEventListener('load', function() {
             setTimeout(function() {
