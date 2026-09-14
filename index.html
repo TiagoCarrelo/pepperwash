@@ -16,7 +16,8 @@
             --card-bg: #12151c;
             --border-color: #222736;
             --text-main: #ffffff;
-            --text-muted: #cbd5e1;
+            --text-muted: #f1f5f9; /* Branco suave/claro e altamente legível */
+            --accent-red-light: #ff4d63;
         }
 
         * {
@@ -249,7 +250,7 @@
             border-radius: 30px;
             font-size: 0.85rem;
             font-weight: 600;
-            color: var(--primary);
+            color: var(--accent-red-light);
             margin-bottom: 15px;
             letter-spacing: 1px;
             text-transform: uppercase;
@@ -411,27 +412,26 @@
             width: 100%;
         }
 
-        /* CAIXA DE INSTRUÇÕES DE ORÇAMENTO (CORRIGIDA PARA NÃO SOBREPOR) */
+        /* CAIXA DE INSTRUÇÕES DE ORÇAMENTO (ESTILO ADAPTATIVO MÓVEL / PC) */
         .booking-instructions {
-            background: linear-gradient(135deg, rgba(18, 21, 28, 0.98) 0%, rgba(26, 31, 42, 0.98) 100%);
-            border: 1px solid rgba(255, 30, 56, 0.35);
-            border-left: 4px solid var(--primary);
-            border-radius: 14px;
-            padding: 20px;
+            background: linear-gradient(135deg, #12151c 0%, #1a1e29 100%);
+            border: 2px solid var(--primary);
+            border-radius: 16px;
+            padding: 30px;
             max-width: 100%;
             margin: 0 auto 40px;
             text-align: left;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(255, 30, 56, 0.25);
         }
 
         .booking-instructions h3 {
-            color: #ffffff;
-            font-size: clamp(1.1rem, 3vw, 1.3rem);
-            margin-bottom: 12px;
+            color: var(--accent-red-light);
+            font-size: clamp(1.2rem, 3.5vw, 1.4rem);
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-weight: 700;
+            gap: 12px;
+            font-weight: 800;
         }
 
         .booking-instructions h3 i {
@@ -440,35 +440,66 @@
 
         .booking-instructions p {
             color: var(--text-muted);
-            font-size: 0.92rem;
+            font-size: clamp(0.95rem, 2.2vw, 1.05rem);
             line-height: 1.6;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .booking-instructions ul {
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 15px;
         }
 
         .booking-instructions li {
             color: #ffffff;
-            font-size: 0.9rem;
+            font-size: clamp(0.9rem, 2vw, 1rem);
             display: flex;
             align-items: flex-start;
-            gap: 10px;
-            line-height: 1.5;
+            gap: 12px;
+            line-height: 1.6;
         }
 
         .booking-instructions li strong {
-            color: #ffffff;
+            color: var(--accent-red-light);
         }
 
         .booking-instructions li i {
             color: var(--primary);
-            margin-top: 3px;
+            margin-top: 4px;
             flex-shrink: 0;
+            font-size: 1.1rem;
+        }
+
+        /* ESTILOS ESPECÍFICOS PARA DISPOSITIVOS MÓVEIS (DETEÇÃO AUTOMÁTICA DE TELA ESTREITA) */
+        @media(max-width: 768px) {
+            .booking-instructions {
+                padding: 18px 15px;
+                border-radius: 12px;
+                background: linear-gradient(135deg, #0f1218 0%, #161b24 100%);
+                border-width: 1.5px;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.8);
+            }
+            .booking-instructions h3 {
+                font-size: 1.15rem;
+                gap: 8px;
+            }
+            .booking-instructions p {
+                font-size: 0.9rem;
+                line-height: 1.5;
+                margin-bottom: 12px;
+            }
+            .booking-instructions ul {
+                gap: 12px;
+            }
+            .booking-instructions li {
+                font-size: 0.88rem;
+                gap: 10px;
+            }
+            .booking-instructions li i {
+                margin-top: 2px;
+            }
         }
 
         /* SERVIÇOS & PRECÁRIO */
@@ -968,9 +999,9 @@
             <h3><i class="fa-solid fa-circle-info"></i> Antes de Agendar ou Solicitar Orçamentos</h3>
             <p>Para os serviços assinalados como <strong>Sob Consulta</strong> (Polimento, Micro Pintura / Micro Repair ou Reparação de Jantes), recomendamos que nos contacte previamente para avaliarmos o estado da pintura e das superfícies:</p>
             <ul>
-                <li><i class="fa-solid fa-check"></i> <strong>Envie-nos fotografias:</strong> Pode contactar-nos via WhatsApp ou chamada para o <strong>+351 936 763 949</strong>[cite: 1] enviando fotos detalhadas das zonas a tratar.</li>
-                <li><i class="fa-solid fa-check"></i> <strong>Horário de Atendimento:</strong> Estamos disponíveis de Segunda a Sábado, das 09:00 às 19:00, nas nossas localizações em Famões e Rio de Mouro.</li>
-                <li><i class="fa-solid fa-check"></i> <strong>Agendamento Direto:</strong> Para os restantes serviços com valores definidos (Lavagens, Estofos, Faróis, etc.), utilize diretamente o nosso sistema online.</li>
+                <li><i class="fa-solid fa-check-circle"></i> <strong>Envie-nos fotografias:</strong> Pode contactar-nos via WhatsApp ou chamada para o <strong>+351 936 763 949</strong>[cite: 1] enviando fotos detalhadas das zonas a tratar.</li>
+                <li><i class="fa-solid fa-check-circle"></i> <strong>Horário de Atendimento:</strong> Estamos disponíveis de Segunda a Sábado, das 09:00 às 19:00, nas nossas localizações em Famões e Rio de Mouro.</li>
+                <li><i class="fa-solid fa-check-circle"></i> <strong>Agendamento Direto:</strong> Para os restantes serviços com valores definidos (Lavagens, Estofos, Faróis, etc.), utilize diretamente o nosso sistema online.</li>
             </ul>
         </div>
 
