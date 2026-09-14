@@ -227,7 +227,6 @@
             font-weight: 800;
             line-height: 1.15;
             margin-bottom: 20px;
-            word-break: break-word;
         }
 
         .hero-text h1 span {
@@ -272,12 +271,6 @@
             object-fit: cover;
             border: 2px solid var(--border-color);
             box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-            transition: transform 0.3s ease;
-        }
-
-        .perfil-img:hover {
-            transform: scale(1.02);
-            border-color: var(--primary);
         }
 
         .btn-about-hero {
@@ -291,13 +284,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            transition: all 0.2s;
             white-space: nowrap;
-        }
-
-        .btn-about-hero:hover {
-            background: var(--primary);
-            border-color: var(--primary);
         }
 
         /* SECÇÃO "QUEM SOMOS" */
@@ -377,7 +364,6 @@
             height: auto;
             border-radius: 20px;
             border: 2px solid var(--border-color);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.7);
         }
 
         /* TRABALHOS RECENTES EM DESTAQUE */
@@ -399,7 +385,6 @@
             margin-bottom: 10px;
             letter-spacing: 1px;
             text-transform: uppercase;
-            word-break: break-word;
         }
 
         .section-title h2 span {
@@ -423,22 +408,16 @@
             border: 1px solid var(--border-color);
             border-radius: 16px;
             overflow: hidden;
-            transition: transform 0.3s ease;
             width: 100%;
         }
 
-        .work-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-        }
-
-        /* CAIXA DE INSTRUÇÕES DE ORÇAMENTO */
+        /* CAIXA DE INSTRUÇÕES DE ORÇAMENTO (CORRIGIDA PARA NÃO SOBREPOR) */
         .booking-instructions {
-            background: linear-gradient(135deg, rgba(18, 21, 28, 0.95) 0%, rgba(26, 31, 42, 0.95) 100%);
+            background: linear-gradient(135deg, rgba(18, 21, 28, 0.98) 0%, rgba(26, 31, 42, 0.98) 100%);
             border: 1px solid rgba(255, 30, 56, 0.35);
             border-left: 4px solid var(--primary);
             border-radius: 14px;
-            padding: 25px;
+            padding: 20px;
             max-width: 100%;
             margin: 0 auto 40px;
             text-align: left;
@@ -447,13 +426,12 @@
 
         .booking-instructions h3 {
             color: #ffffff;
-            font-size: clamp(1.15rem, 3vw, 1.35rem);
+            font-size: clamp(1.1rem, 3vw, 1.3rem);
             margin-bottom: 12px;
             display: flex;
             align-items: center;
             gap: 10px;
             font-weight: 700;
-            flex-wrap: wrap;
         }
 
         .booking-instructions h3 i {
@@ -462,21 +440,21 @@
 
         .booking-instructions p {
             color: var(--text-muted);
-            font-size: clamp(0.9rem, 2vw, 1rem);
+            font-size: 0.92rem;
             line-height: 1.6;
             margin-bottom: 15px;
         }
 
         .booking-instructions ul {
             list-style: none;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
 
         .booking-instructions li {
             color: #ffffff;
-            font-size: clamp(0.88rem, 2vw, 0.95rem);
+            font-size: 0.9rem;
             display: flex;
             align-items: flex-start;
             gap: 10px;
@@ -489,7 +467,7 @@
 
         .booking-instructions li i {
             color: var(--primary);
-            margin-top: 4px;
+            margin-top: 3px;
             flex-shrink: 0;
         }
 
@@ -575,7 +553,6 @@
             font-weight: 600;
             font-size: 0.8rem;
             text-decoration: none;
-            transition: all 0.2s;
             white-space: nowrap;
         }
 
@@ -593,7 +570,6 @@
             font-weight: 600;
             font-size: 0.8rem;
             cursor: pointer;
-            transition: all 0.2s;
             display: inline-flex;
             align-items: center;
             gap: 5px;
@@ -621,7 +597,6 @@
             grid-template-columns: 0.8fr 1.2fr;
             gap: 30px;
             align-items: center;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
             position: relative;
             overflow: hidden;
         }
@@ -631,7 +606,6 @@
             position: absolute;
             top: 0; left: 0; width: 4px; height: 100%;
             background: var(--partner-yellow);
-            box-shadow: 0 0 15px var(--partner-yellow);
         }
 
         .partner-img-container {
@@ -647,7 +621,6 @@
             object-fit: cover;
             border-radius: 50%;
             border: 3px solid var(--partner-yellow);
-            box-shadow: 0 0 25px rgba(255, 222, 0, 0.25);
         }
 
         .partner-info h3 {
@@ -655,8 +628,6 @@
             font-weight: 800;
             margin-bottom: 12px;
             color: #fff;
-            letter-spacing: 1px;
-            word-break: break-word;
         }
 
         .partner-info h3 span {
@@ -680,7 +651,6 @@
             font-size: 0.8rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
             margin-bottom: 12px;
         }
 
@@ -821,11 +791,6 @@
             justify-content: center;
             gap: 8px;
             font-size: 0.95rem;
-            transition: opacity 0.2s;
-        }
-
-        .btn-whatsapp:hover {
-            opacity: 0.9;
         }
 
         .btn-call {
@@ -840,11 +805,6 @@
             justify-content: center;
             gap: 8px;
             font-size: 0.95rem;
-            transition: opacity 0.2s;
-        }
-
-        .btn-call:hover {
-            opacity: 0.9;
         }
 
         .modal-close {
@@ -854,10 +814,6 @@
             color: var(--text-muted);
             cursor: pointer;
             font-size: 0.9rem;
-        }
-
-        .modal-close:hover {
-            color: #fff;
         }
 
         /* RODAPÉ */
@@ -870,7 +826,6 @@
             font-size: 0.85rem;
         }
 
-        /* MEDIA QUERIES PARA ADAPTAÇÃO TOTAL DE DISPOSITIVOS */
         @media(max-width: 968px) {
             .hero-content, .partner-box, .about-grid {
                 grid-template-columns: 1fr;
@@ -889,34 +844,11 @@
             .about-features {
                 grid-template-columns: 1fr;
             }
-            .booking-instructions {
-                padding: 20px;
-            }
-        }
-
-        @media(max-width: 480px) {
-            body {
-                padding-top: 65px;
-            }
-            .nav-container {
-                padding: 10px 15px;
-            }
-            .btn-main {
-                padding: 6px 12px;
-                font-size: 0.8rem;
-            }
-            .hero {
-                padding: 40px 15px;
-            }
-            .service-card {
-                padding: 20px 15px;
-            }
         }
     </style>
 </head>
 <body>
 
-    <!-- EFEITO DE ABERTURA SUAVE -->
     <div id="splash-screen">
         <div class="splash-content">
             <img src="logo.png" alt="Pepper Wash Logo">
@@ -924,7 +856,6 @@
         </div>
     </div>
 
-    <!-- MODAL DE ESCOLHA DE CONTACTO PARA SERVIÇOS SOB CONSULTA -->
     <div class="modal-overlay" id="contactModal">
         <div class="modal-card">
             <h3>Fale Connosco</h3>
@@ -941,7 +872,6 @@
         </div>
     </div>
 
-    <!-- NAVBAR DINÂMICA -->
     <header id="navbar">
         <div class="nav-container">
             <a href="#" class="logo-area">
@@ -962,14 +892,13 @@
         </div>
     </header>
 
-    <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-content">
             <div class="hero-text">
                 <div class="moto">Conhecimento • Paixão • Perfeição</div>
                 <h1>Auto Detailing & <span>Cuidado Automóvel</span></h1>
                 <p>Especialistas na renovação estética e proteção avançada do seu veículo. Conheça a nossa história, veja os trabalhos em destaque ou consulte o precário completo[cite: 1].</p>
-                <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-start;" class="hero-btns-wrap">
+                <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-start;">
                     <a href="#servicos" class="btn-main" style="padding: 12px 24px; font-size: 1rem;">Ver Precário & Serviços[cite: 1]</a>
                     <a href="#quemsomos" class="btn-about-hero"><i class="fa-solid fa-users"></i> Quem Somos</a>
                 </div>
@@ -980,7 +909,6 @@
         </div>
     </section>
 
-    <!-- SECÇÃO "QUEM SOMOS" -->
     <section class="about-section" id="quemsomos">
         <div class="about-grid">
             <div class="about-text">
@@ -1008,7 +936,6 @@
         </div>
     </section>
 
-    <!-- TRABALHOS RECENTES EM DESTAQUE -->
     <section class="showcase-section" id="trabalhos">
         <div class="section-title">
             <h2>Trabalhos em <span>Destaque</span></h2>
@@ -1031,14 +958,12 @@
 
     <script async src="//www.instagram.com/embed.js"></script>
 
-    <!-- CATÁLOGO DE SERVIÇOS E PRECÁRIO -->
     <section class="services-section" id="servicos">
         <div class="section-title">
             <h2>Nossos <span>Serviços & Precário</span></h2>
             <p>Informação completa de tratamentos com margens indicativas de preço</p>
         </div>
 
-        <!-- CAIXA DE INSTRUÇÕES PRÉ-MARCAÇÃO -->
         <div class="booking-instructions">
             <h3><i class="fa-solid fa-circle-info"></i> Antes de Agendar ou Solicitar Orçamentos</h3>
             <p>Para os serviços assinalados como <strong>Sob Consulta</strong> (Polimento, Micro Pintura / Micro Repair ou Reparação de Jantes), recomendamos que nos contacte previamente para avaliarmos o estado da pintura e das superfícies:</p>
@@ -1099,7 +1024,6 @@
                 </div>
             </div>
 
-            <!-- SERVIÇO: MICRO PINTURA / MICRO REPAIR -->
             <div class="service-card">
                 <div>
                     <i class="fa-solid fa-paintbrush service-icon"></i>
@@ -1163,7 +1087,6 @@
         </div>
     </section>
 
-    <!-- SECÇÃO DE PARCERIA OFICIAL (BRM PERFORMANCE) -->
     <section class="partner-section" id="parceria">
         <div class="partner-box">
             <div class="partner-img-container">
@@ -1178,14 +1101,12 @@
         </div>
     </section>
 
-    <!-- BANNER DE MARCAÇÃO -->
     <section class="cta-section">
         <div class="cta-box">
             <h2>Pronto para transformar o seu veículo?</h2>
             <p>Selecione o serviço pretendido, consulte os horários disponíveis e garanta a sua reserva de forma rápida e cómoda.</p>
             <a href="https://pepperwash.buk.pt" target="_blank" class="btn-main" style="font-size: 1.05rem; padding: 12px 30px; display: inline-block;">Reservar[cite: 1]</a>
             
-            <!-- INFORMAÇÕES DE LOCALIZAÇÃO, TELEFONE E HORÁRIOS -->
             <div class="locations-info">
                 <div class="location-item">
                     <i class="fa-solid fa-location-dot"></i> Famões
@@ -1204,14 +1125,11 @@
         </div>
     </section>
 
-    <!-- RODAPÉ -->
     <footer>
         <p>&copy; 2026 Pepper Wash - Auto Detailing. Todos os direitos reservados. Conhecimento • Paixão • Perfeição.[cite: 1]</p>
     </footer>
 
-    <!-- SCRIPTS -->
     <script>
-        // Funções para abrir e fechar o modal de contacto
         function openContactModal() {
             document.getElementById('contactModal').classList.add('active');
         }
@@ -1220,7 +1138,6 @@
             document.getElementById('contactModal').classList.remove('active');
         }
 
-        // Fechar modal ao clicar fora dele
         window.addEventListener('click', function(event) {
             const modal = document.getElementById('contactModal');
             if (event.target === modal) {
@@ -1228,7 +1145,6 @@
             }
         });
 
-        // Transição suave do Splash Screen
         window.addEventListener('load', function() {
             setTimeout(function() {
                 const splash = document.getElementById('splash-screen');
